@@ -2,7 +2,11 @@
 
 > Navigation sidebar which dynamically updates active element and URL
 
-## Install
+### Demo
+
+
+
+### Install
 
 ```bash
 npm install --save scroll-spy
@@ -10,7 +14,7 @@ npm install --save scroll-spy
 
 ## Usage
 
-Wrap your page in the Menu component. Wrap your MenuItems in the Menu component and your content in the Content component.
+Wrap your page in the Canvas component. Wrap your MenuItems in the Menu component and your content in the Content component.
 
 ```jsx
 import React from 'react'
