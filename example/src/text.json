@@ -1,12 +1,8 @@
-import React from 'react'
 
-import { Canvas, Menu, MenuItem, Content } from 'scroll-spy'
-
-const sections = [
   {
-    id: 'what-is-primer-launching',
-    title: 'What is Primer launching?',
-    text: [
+   "id": 'what-is-primer-launching',
+    "title": 'What is Primer launching?',
+    "text": [
       "This fall, we're releasing an online community for homeschooling kids, where we host interest-based clubs. Our clubs connect academic lessons to the real world through projects that kids explore on their own or with their families. In our current clubs, students are building vehicles using rubber bands, writing stories with original characters, designing computer games from scratch, and exploring the natural world around them.",
       "When students create accounts on Primer's website, they can join clubs right away and pick a few projects to work on independently from our library.",
       'As learners progress through a project, they can post updates on their progress, ask questions, and request feedback from Primer admins and other club members.',
@@ -14,16 +10,16 @@ const sections = [
     ]
   },
   {
-    id: "who-writes-primer's-projects",
-    title: "Who writes Primer's Projects?",
-    text: [
+   "id": "who-writes-primer's-projects",
+    "title": "Who writes Primer's Projects?",
+    "text": [
       "Primer's education team has experience building rockets at SpaceX, designing high schools, teaching in New York's public schools, accelerating the Girls Who Code movement, building robots, teaching programming at Berkeley, and building worlds in VR. As passionate lifelong learners, we play-test every single project that we publish, so we get excited every time a student approaches a project in their own unique way."
     ]
   },
   {
-    id: 'which-clubs-will-be-available-at-launch',
-    title: 'Which clubs will be available at launch?',
-    text: [
+   "id": 'which-clubs-will-be-available-at-launch',
+    "title": 'Which clubs will be available at launch?',
+    "text": [
       '📘 Storytellers Club',
       ' Storytellers craft fables, building worlds, and designing characters. Storytellers try different genres and formats including journalism, fables, and podcasting.',
       '🎮 Game Makers Club',
@@ -35,38 +31,11 @@ const sections = [
     ]
   },
   {
-    id: 'which-clubs-are-right-for-my-kids',
-    title: 'Which clubs are right for my kids?',
-    text: [
+   "id": 'which-clubs-are-right-for-my-kids',
+    "title": 'Which clubs are right for my kids?',
+    "text": [
       "In short, all of them! We work to make sure that every student feels seen and celebrated in all of our clubs. Students are welcome to explore Primer's clubs freely, try a project and meet other club members, and adjust their involvement in different clubs over time.",
       "Students don't need any relevant experience before checking out any of Primer's clubs. Students can preview a club and explore its projects before joining, or try a project and decide to focus elsewhere. As we grow our product, we look forward to expanding our list of clubs to include activities like cooking, entrepreneurship, and art."
     ]
   }
 ]
-
-const App = () => {
-  return (
-    <Canvas>
-      <Menu>
-        {sections.map((section) => (
-          <MenuItem title={section.title} toId={section.id} />
-        ))}
-      </Menu>
-      <Content>
-        <div style={{ maxWidth: '50%', marginLeft: '25%' }}>
-          <h1>What is Primer?</h1>
-          {sections.map((section) => (
-            <div style={{ paddingBottom: '15%' }} id={section.id}>
-              <h2>{section.title}</h2>
-              {section.text.map((paragraph) => (
-                <p>{paragraph}</p>
-              ))}
-            </div>
-          ))}
-        </div>
-      </Content>
-    </Canvas>
-  )
-}
-
-export default App

@@ -14,9 +14,10 @@ export const Menu = (props) => {
       style={{
         display: 'flex',
         flexDirection: 'column',
-        width: '15%',
+        width: '20%',
         position: 'fixed',
-        top: ''
+        height: '100%',
+        backgroundColor: '#00FFFF'
       }}
     >
       {props.children}
@@ -32,7 +33,7 @@ export const MenuItem = ({ title, toId }) => {
       ([entry]) => {
         setHighlight(entry.isIntersecting)
       },
-      { threshold: 0.5 }
+      { rootMargin: '0px 0px -99%' }
     )
     observer.observe(document.getElementById(toId))
 
@@ -52,7 +53,11 @@ export const MenuItem = ({ title, toId }) => {
   return (
     <div
       style={{
-        backgroundColor: highlight ? '#808080' : '#A9A9A9'
+        backgroundColor: highlight ? '#1E90FF' : '#00FFFF',
+        color: highlight ? 'white' : 'black',
+        border: highlight ? 'thick solid #0000FF' : '',
+        cursor: 'pointer',
+        padding: '10px'
       }}
       onClick={scrollToId}
     >
@@ -62,5 +67,5 @@ export const MenuItem = ({ title, toId }) => {
 }
 
 export const Content = (props) => {
-  return <div style={{ width: '85%', marginLeft: '15%' }}>{props.children}</div>
+  return <div style={{ width: '80%', marginLeft: '20%' }}>{props.children}</div>
 }
