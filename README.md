@@ -2,8 +2,6 @@
 
 > Navigation sidebar which dynamically updates active element and URL
 
-[![NPM](https://img.shields.io/npm/v/scroll-spy.svg)](https://www.npmjs.com/package/scroll-spy) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
 ## Install
 
 ```bash
@@ -12,19 +10,33 @@ npm install --save scroll-spy
 
 ## Usage
 
+Wrap your page in the Menu component. Wrap your MenuItems in the Menu component and your content in the Content component.
+
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'scroll-spy'
-import 'scroll-spy/dist/index.css'
+import { Canvas, Menu, MenuItem, Content } from 'scroll-spy'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const App = () => {
+  return (
+    <Canvas>
+      <Menu>
+        /* The title tells determines what the heading in the sidebar will be.
+        The toId specificies which component this section corresponds to. */
+        <MenuItem title='Alpha' toId='alpha' />
+        <MenuItem title='Beta' toId='beta' />
+      </Menu>
+      <Content>
+        /* Make sure to give your content the same id as the corresponding
+        MenuItem */
+        <div id='alpha'>...</div>
+        <div id='beta'>...</div>
+      </Content>
+    </Canvas>
+  )
 }
 ```
 
 ## License
 
-MIT © [dwarkeshsp](https://github.com/dwarkeshsp)
+MIT © [Dwarkesh Patel](https://github.com/dwarkeshsp)
