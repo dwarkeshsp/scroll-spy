@@ -1,16 +1,8 @@
 # scroll-spy
 
-> Navigation sidebar which dynamically updates active element and URL
+> Navigation sidebar which updates highlighted menu item and URL as you scroll
 
-### Demo
-
-
-
-### Install
-
-```bash
-npm install --save scroll-spy
-```
+## [Demo](https://scroll-spy.web.app/)
 
 ## Usage
 
@@ -40,6 +32,10 @@ const App = () => {
   )
 }
 ```
+
+## Writeup
+
+### Design
 
 ## License
 
