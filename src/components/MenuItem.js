@@ -8,7 +8,10 @@ export default ({ title, toId }) => {
       ([entry]) => {
         setHighlight(entry.isIntersecting)
       },
-      { rootMargin: '0px 0px -99%' }
+      {
+        rootMargin: '0px 0px -100%',
+        threshold: 0
+      }
     )
     observer.observe(document.getElementById(toId))
 

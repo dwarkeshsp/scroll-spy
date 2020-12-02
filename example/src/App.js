@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { Canvas, Menu, MenuItem, Content } from 'scroll-spy'
+import { Menu, MenuItem, Content } from 'scroll-spy'
 
 const App = () => {
   return (
-    <Canvas>
+    <div style={{ display: 'flex' }}>
       <Menu>
         {sections.map((section) => (
           <MenuItem title={section.title} toId={section.id} />
@@ -23,7 +23,7 @@ const App = () => {
           ))}
         </div>
       </Content>
-    </Canvas>
+    </div>
   )
 }
 
