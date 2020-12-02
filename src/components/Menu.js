@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default (props) => {
+  // fix menu to the left quarter of the screen
   return (
     <div
       style={{

@@ -6,7 +6,7 @@
 
 ## Usage
 
-Wrap your MenuItems in the Menu component and your content in the Content component.
+Wrap your MenuItems in the Menu component and your content in the Content component. Code for components in /src/components. Code for demo in /example.
 
 ```jsx
 import React from 'react'
@@ -17,13 +17,14 @@ const App = () => {
   return (
     <div>
       <Menu>
-        /* The title is the heading in the sidebar.
-        The toId specificies which component this section corresponds to. */
+        /* The title is the heading in the sidebar. The toId specificies which
+        component this section corresponds to. */
         <MenuItem title='First is the worst' toId='first' />
         <MenuItem title='Second is the best' toId='second' />
       </Menu>
       <Content>
-        /* Make sure to give your content the same id as the corresponding 			MenuItem */
+        /* Make sure to give your content the same id as the corresponding
+        MenuItem */
         <div id='first'>Here's why first is the worst...</div>
         <div id='second'>Here's why second is the best...</div>
       </Content>

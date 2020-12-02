@@ -9,25 +9,32 @@ export default ({ title, toId }) => {
         setHighlight(entry.isIntersecting)
       },
       {
+        // only check the top border of the screen for intersections
         rootMargin: '0px 0px -100%',
+        // cause callback only when this element enters top of screen
         threshold: 0
       }
     )
-    observer.observe(document.getElementById(toId))
 
+    const observeElem = document.getElementById(toId)
+
+    observer.observe(observeElem)
+
+    // change hash url
     if (highlight) {
       window.history.replaceState(null, null, '#' + toId)
     }
 
     return () => {
-      observer.unobserve(document.getElementById(toId))
+      observer.unobserve(observeElem)
     }
   })
 
-  function scrollToId() {
+  function scrollToElem() {
     document.getElementById(toId).scrollIntoView()
   }
 
+  // change div color based on observer results
   return (
     <div
       style={{
@@ -37,7 +44,7 @@ export default ({ title, toId }) => {
         cursor: 'pointer',
         padding: '10px'
       }}
-      onClick={scrollToId}
+      onClick={scrollToElem}
     >
       {title}
     </div>
