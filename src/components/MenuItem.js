@@ -28,7 +28,7 @@ export default ({ title, toId }) => {
     return () => {
       observer.unobserve(observeElem)
     }
-  })
+  }, [])
 
   function scrollToElem() {
     document.getElementById(toId).scrollIntoView()
